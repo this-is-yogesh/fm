@@ -37,13 +37,6 @@ function Content({ label, content }: { label: string; content: string }) {
   if (!toggleContext) return;
   const { open, contentRef } = toggleContext;
   // Use useEffect to access contentRef.current after render
-  useEffect(() => {
-    if (contentRef.current) {
-      const element = contentRef.current.getBoundingClientRect();
-      
-      console.log("BoundingClientRect:", element); // Example: log the rect
-    }
-  }, [contentRef, open]); // Run effect when contentRef or open changes
   if (!open) return;
   return (
     <div className="popContent" ref={contentRef}>
