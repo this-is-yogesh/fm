@@ -1,0 +1,2 @@
+setinterval on first render , and the interval function will keep updating the state variable which will keep rendering the component, rendering the timer
+we can also use requestAnimationFrame(cbFn) and inside cnFn again set requestAnimationFrame, if our desktop is 60hz, request animation frame will run 60 updates every second meaning, it will update digital clock 60 times per second which is not required here as second is updated once every second so its not required here but good for where animation is required
